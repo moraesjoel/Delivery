@@ -13,10 +13,11 @@ public class validaDados implements Request{
     private boolean validacao;
 
     public void setDadosRecebidos(double peso, double altura, double largura, double comprimento, String cepOrigem, String cepDestino) {
-        if (peso > 0 && altura > 0 && largura > 0 && comprimento > 0 && /* Tratar isso -> cepOrigem.length() = 8) && cepDestino.length() = 8) */{
-            this.validacao = true;
-        }
-        else {
+        if (peso > 0 && altura > 0 && largura > 0 && comprimento > 0){
+            if (cepDestino.length() == 8 && cepOrigem.length() == 8 ) {
+                this.validacao = true;
+            }
+        } else {
             this.validacao = false;
         }
     }
@@ -27,7 +28,7 @@ public class validaDados implements Request{
 
     public static void main(String[] args){
         validaDados validacao = new validaDados();
-        validacao.setDadosRecebidos();
+        validacao.setDadosRecebidos(2,10,10,10,Integer.toString(95600230), Integer.toString(95650124));
         System.out.println(validacao.getDadosRecebidos());
     }
 }
