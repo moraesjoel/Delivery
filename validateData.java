@@ -1,5 +1,5 @@
 interface Request {
-    public void setReceivedData (double weight, double height, double width, double length, String originPostalCode, String destinyPostalCode);
+    public void setReceivedData (double weight, double height, double width, double length, String originPostalCode, String destinationPostalCode);
     public boolean getReceivedData();
 }
 
