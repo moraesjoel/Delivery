@@ -9,12 +9,12 @@ public class validateData implements Request{
     private double width;
     private double length;
     private String originPostalCode;
-    private String destinyPostalCode;
+    private String destinationPostalCode;
     private boolean validation;
 
-    public void setReceivedData(double weight, double height, double width, double length, String originPostalCode, String destinyPostalCode) {
+    public void setReceivedData(double weight, double height, double width, double length, String originPostalCode, String destinationPostalCode) {
         if (weight > 0 && height > 0 && width > 0 && length > 0){
-            if (originPostalCode.length() == 8 && destinyPostalCode.length() == 8 ) {
+            if (originPostalCode.length() == 8 && destinationPostalCode.length() == 8 ) {
                 this.validation = true;
             }
         } else {
